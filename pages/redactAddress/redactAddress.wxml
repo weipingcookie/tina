@@ -1,0 +1,20 @@
+<outer>
+<view class="redact-box">
+<view class="redact-item redact-inline">
+  <text>收货人:</text>
+  <input type="text" placeholder='请输入收货人姓名'></input>
+</view>
+<view class="redact-item redact-inline">
+  <text>联系方式:</text>
+  <input type="text" placeholder='请输入手机号码'></input>
+</view>
+<view class="redact-item">
+  <text>地址:</text>
+  <input maxlength='50' type="text" placeholder='请输入收货地址'></input>
+</view>
+  <view class="add-address">
+    <image src="../../images/buttonbg.png"></image>
+    <text class="add-tltle">提交</text>
+  </view>
+</view>
+</outer>

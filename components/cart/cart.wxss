@@ -1,0 +1,137 @@
+@import "../../common/css/icon.wxss";
+.cart-box{
+  width:100%;
+  height:90rpx;
+  background: rgba(231,167,91,1);
+  position: relative;
+}
+.cart-in{
+  width:100%;
+  height:90rpx;
+  position: relative;
+  z-index: 50;
+}
+.cart-left{
+  width:70%;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color:#fff;
+  font-size:24rpx;
+  float: left;
+  background:rgba(231,167,91,1);
+
+}
+.cart-right{
+  width:30%;
+  height:90rpx;
+  line-height: 90rpx;
+  color:#fff;
+  background: #fd8701;
+  float: right;
+  text-align: center;
+  font-size:28rpx;
+}
+.cart-outer{
+  width:102rpx;
+  height:102rpx;
+  background: #fd8701;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  bottom:10rpx;
+  box-shadow: 0 0 10rpx #000;
+  z-index: 100;
+}
+.cart-inner{
+  width:80rpx;
+  height:80rpx;
+  border:2rpx solid rgba(255,255,255,.5);
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  position: relative;
+}
+.cart-icon{
+  font-size:56rpx;
+  color:#fff;
+}
+.corner-mark{
+  width:34rpx;
+  height:34rpx;
+  background: #dbeaf7;
+  text-align: center;
+  line-height: 34rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -10rpx;
+  top:-10rpx;
+  color:#053860;
+  font-size:20rpx
+}
+.cart-detail-box{
+  width:100%;
+  height:0rpx;
+  background: #dbeaf7;
+  position: absolute;
+  bottom:90rpx;
+  left:0;
+  transition: all .2s linear;
+  overflow: hidden;
+  z-index: 50;
+}
+.dHeight{
+  height:400rpx;
+}
+.detail-title{
+  padding: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:24rpx;
+  border-top: 6rpx dashed #083b66;
+  border-bottom: 6rpx dashed #083b66;
+  color:#053860;
+}
+.delete{
+  padding: 10rpx;
+}
+.pay{
+  padding: 10rpx;
+}
+.detail-box{
+  height:306rpx;
+}
+.cart-detail-inner{
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+}
+.detail-name{
+  color:#053860;
+  font-size:28rpx;
+  flex:1;
+}
+.detail-num{
+  color:#053860;
+  font-size: 28rpx;
+  flex:120rpx;
+  text-align: center;
+}
+.icon-muit{
+  font-size:28rpx;
+}
+.detail-price{
+  font-size: 28rpx;
+  color:#053860;
+}
+.mask{
+width:100%;
+background:rgba(0,0,0,.5);
+position:absolute;
+bottom:0;
+left:0;
+z-index:30;
+}

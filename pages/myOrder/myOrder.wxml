@@ -1,0 +1,60 @@
+<outer>
+  <view class="order-nav">
+    <view class="nav-box {{select==1?'select':''}}" data-oid="1" bindtap='toggleOrder'>
+      <text class="iconfont icon-shiwumiantiao order-icon"></text>
+      <text class="font-title">堂食</text>
+    </view>
+    <view class="nav-box {{select==2?'select':''}}"  data-oid="2" bindtap='toggleOrder'>      
+      <text class="iconfont icon-waidai- order-icon"></text>
+      <text class="font-title">外带</text>
+    </view>
+  </view>
+               
+  <view wx:if="{{select==1}}" class='order-data-box'>
+    <view class="order-item-box" wx:for="{{eatinData}}" wx:key="index">
+      <view class="order-image" >
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="order-right-box">
+        <view class="order-title">
+          <text>桌号：{{item.tableNum}}</text>
+          <text class="order-state">{{item.state}}</text>
+        </view>
+        <view class="order-time">
+          <text>{{item.time}}</text>
+        </view>
+        <view class="order-detail">
+          <text>{{item.food[0].name}}等{{item.food.length}}件商品</text>
+          <text>￥{{item.cprice}}</text>
+        </view>
+        <view class="order-again">
+          <view>再来一单</view>          
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:else="{{select}}" class='order-data-box'>
+    <view class="order-item-box" wx:for="{{takeoutData}}" wx:key="index">
+      <view class="order-image" >
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="order-right-box">
+        <view class="order-title">
+          <text>订单号：{{item.tableNum}}</text>
+          <text class="order-state">{{item.state}}</text>
+        </view>
+        <view class="order-time">
+          <text>{{item.time}}</text>
+        </view>
+        <view class="order-detail">
+          <text>{{item.food[0].name}}等{{item.food.length}}件商品</text>
+          <text>￥{{item.cprice}}</text>
+        </view>
+        <view class="order-again">
+          <view>再来一单</view>          
+        </view>
+      </view>
+    </view>
+  </view>
+</outer>

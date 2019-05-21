@@ -1,0 +1,158 @@
+@import "../../common/css/common.wxss";
+@import "../../common/css/icon.wxss";
+.header-bg {
+  width: 100%;
+  overflow: hidden;
+}
+
+.header-bg image {
+  width: 100%;
+  display: block;
+}
+
+.nav-bar {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-bar view {
+  display: inline-block;
+  font-size: 36rpx;
+  color: #999;
+  font-family: "黑体";
+  position: relative;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 20rpx 30rpx;
+  position: relative;
+}
+
+.line {
+  width: 50rpx;
+  height: 6rpx;
+  background: #fd8701;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100rpx;
+}
+
+.active.nav-item {
+  font-size: 40rpx;
+  color: #000;
+}
+
+.goods-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20rpx;
+  width: 90%;
+  margin: 20rpx auto;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20rpx;
+}
+
+.item-image {
+  width: 28%;
+  overflow: hidden;
+  margin-right: 2%;
+  height: 210rpx;
+}
+
+.item-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.item-title {
+  font-size: 32rpx;
+  color: #666;
+  text-align: left;
+}
+
+.item-desc {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 10rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.item-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.item-price {
+  font-size: 40rpx;
+  color: #f00;
+  flex: 130rpx;
+  overflow: hidden;
+}
+
+.item-sale {
+  flex: 40%;
+  font-size: 24rpx;
+  color: #666;
+  text-align: center;
+}
+
+.add {
+  font-size: 26rpx;
+  flex: 40%;
+  overflow: hidden;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.add image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60rpx;
+}
+
+.add text {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.item-right {
+  padding-top: 10rpx;
+  width: 70%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.goods-outer {
+  height: 59vh;
+}
+
+.cart {
+  position: absolute;
+  bottom: 0;
+  height: 90rpx;
+  width: 100%;
+}

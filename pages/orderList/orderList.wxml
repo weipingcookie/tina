@@ -1,0 +1,71 @@
+<!--订单页-->
+<outer>
+  <!-- <view class="holdHigh"></view> -->
+  <view class="ol-box">
+  <view class="inner-box">
+    <view class="ol-title">选择桌位号</view>
+    <image class="ol-bg" src="../../images/rope.png"></image>
+    <view class="table-type-box">
+      <view data-rid='{{sroom.id}}' bindtap='tableChoseType' class="{{!hasBack?'table-bg':''}}">散座</view>
+      <view data-rid='{{proom.id}}' bindtap='tableChoseType' class="{{hasBack?'table-bg':''}}">包间</view>
+    </view>
+    <scroll-view class="over-out" scroll-y>
+      <view class="num-outer">
+        <view bindtap='choseNumber' data-num="{{item}}" data-tooth="{{tapNum}}" class="num {{tapNum==item?'numbg':''}}" wx:for="{{numData}}" wx:key="index">{{item}}号</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+  <view class="peonum-box">
+    <text class="iconfont icon-crowd renshu"></text>
+    <picker class="picker" bindtap='routed' bindchange='bindPickerChange' range="{{dinerRnum}}" value="{{index}}">{{index==""?"请选择用餐人数":"用餐人数："+dinerRnum[index]}}
+    </picker>
+    <text class='iconfont icon-icon1 downarrow {{routed?"downarrow-route":""}}'></text>
+  </view>
+  <scroll-view scroll-y class="order-list-box">
+  <view wx:for="{{orderData}}" wx:key="index" class="order-item" wx:if="{{item.number>0}}">
+    <view class="item-name">{{item.name}}</view>
+    <view class="item-price">￥{{item.price}}</view>
+    <view class="num-btn">
+      <view bindtap='minus' data-id="{{item.id}}" data-number="{{item.number}}" class="minus iconfont icon-jian"></view>
+      <view class="item-number">{{item.number}}</view>
+      <view bindtap='add' data-id="{{item.id}}" data-number="{{item.number}}" class="add iconfont icon-jia"></view>
+    </view>
+  </view>
+  </scroll-view>
+  <view class="order-item">
+    <text class="summation">合计</text>
+    <text class="summation">￥{{totalPrice}}</text>
+  </view>
+  <view class="order-item" style="border-bottom:none">
+    <view class="summation">备注：</view>
+    <input type="text" style="flex:1" value="此处备注"></input>
+    <!-- <view wx:if="{{!isShowText}}" bindtap='onShowTextare' class="comment">{{remark}}</view>
+    <textarea wx:if="{{!isShowText}}" bindblur='onRearkInput' bindconfirm='onShowText' focus='{{onFocus}}' value="{{remark}}" wx:if="{{onFocus}}" class="text-container" placeholder="在此处备注" maxlength="100"></textarea> -->
+  </view>
+  <view class="pay-container">
+    <view bindtap='chosePay' data-pid="{{item.pid}}" wx:for="{{payData}}" wx:key="index">
+      <text class="payname iconfont {{paySelect==item.pid?'icon-xuanzhong':'icon-yuan'}}"></text>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="pay-box {{show?'show-btm':''}}">
+    <view>合计：{{totalPrice}}元</view>
+    <view bindtap='showPay' >立即提交</view>
+  </view>
+  <view class="pay-container2 {{show?'show':''}}">
+    <view class="container-in">
+      <text bindtap='close' class="iconfont icon-guanbi close"></text>
+      <image class="pbg" src="../../images/paybg.png" mode="widthFix"></image>
+      <view class="pay-info">
+        <view>￥<text class="pay-price">{{totalPrice}}</text>元</view>
+        <view class="pay-btn" bindtap='goToComplete'>
+          <image class="affirm" src="../../images/paybtnbg.png"></image>
+          <text>确认支付</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{show}}" class="mask"></view>
+</outer>
+

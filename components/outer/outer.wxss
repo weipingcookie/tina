@@ -1,0 +1,34 @@
+page {
+  background: #dbeaf7;
+}
+
+.outer-box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.outer-in-box {
+width:90%;
+height:90vh;
+border:6rpx dashed #083b66;
+position:absolute;
+top:50%;
+left:50%;
+background:url('https://raw.githubusercontent.com/weipingcookie/font/master/bg.png') no-repeat -50rpx 0;
+background-size:110% 100%;
+overflow:hidden;
+margin-left:-45%;
+margin-top:-45vh;
+
+}
+
+.jy {
+  width: 152rpx;
+  position: absolute;
+  z-index: 400;
+  left: 70%;
+  top: 0%;
+  height: 120rpx;
+}

@@ -1,0 +1,67 @@
+@import "../../common/css/icon.wxss";
+@import "../../common/css/common.wxss";
+
+.shop-photo{
+  width:100%;
+}
+.shopdetail-bg{
+  width:84%;
+  height:600rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  margin: 0 auto;
+  position: relative;
+  top:-120rpx;
+  padding: 40rpx;
+  color:#053860;
+   box-shadow: 8rpx 8rpx 5rpx #595757;
+}
+.detial-title{
+  font-size:58rpx;
+  color:#053860;
+}
+.detial-mode{
+  font-size:42rpx;
+  margin-top: 20rpx;
+}
+.detial-info{
+  font-size:28rpx;
+  margin-top: 20rpx;
+  line-height: 1.6;
+}
+.detial-address{
+  font-size:28rpx;
+  margin-top: 18rpx;
+}
+.detial-time{
+  font-size:28rpx;
+  margin-top: 18rpx;
+}
+.detial-tel{
+  font-size:28rpx;
+  margin-top: 10rpx;
+}
+.sh{
+  width:100rpx;
+  position: absolute;
+  right:20rpx;
+  top:-80rpx;
+}
+.hpx{
+  width:78rpx;
+  position: absolute;
+  bottom:-10rpx;
+  left:-5rpx;
+}
+.cz{
+  width:160rpx;
+  position: absolute;
+  bottom:10%;
+  right:3%;
+}
+.dpx{
+  width:160rpx;
+  position: absolute;
+  bottom:0;
+  right:3%;
+}

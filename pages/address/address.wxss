@@ -1,0 +1,73 @@
+@import "../../common/css/icon.wxss";
+@import "../../common/css/common.wxss";
+.address-box{
+  width:96%;
+  margin: 0 auto;
+  height:200rpx;
+  margin-top:60rpx;
+  position: relative;
+}
+.address-box image{
+  width:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+.addressinfo-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
+}
+.address-info-box{
+  padding: 6%;
+}
+.addressinfo-title{
+  font-size:32rpx;
+  color:#3c3c3c;
+  margin-bottom: 10rpx;
+}
+.address-content{
+  font-size:28rpx;
+  color:#aaaaaa;
+  margin-bottom: 10rpx;
+}
+.address-btm{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3%;
+  color:#979796;
+  font-size:28rpx;
+  align-items: center;
+}
+.address-icon{
+  font-size:30rpx;
+  margin-right: 10rpx;
+}
+.btm{
+  display: flex;
+  justify-content: space-between;
+}
+.redact{
+  margin-right: 20rpx;
+}
+.add-address{
+  width:300rpx;
+  height:80rpx;
+  margin: 0 auto;
+  position: relative;
+  line-height: 80rpx;
+  text-align: center;
+  color:#fff;
+  font-size:34rpx;
+  margin-top: 60rpx;
+  margin-bottom: 50rpx;
+}
+.add-address image{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index: -1;
+}

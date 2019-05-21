@@ -1,0 +1,38 @@
+<outer>
+  <view class="content-box">
+    <view class="order-title">
+      <text>餐位</text>
+      <text class="number">38</text>
+    </view>
+    <view class="list-title">
+      <text>订单已下厨</text>
+    </view>
+    <view class="detail">
+      <text>订单详情</text>
+      <text class="iconfont icon-icon1"></text>
+    </view>
+    <view class="order-info">
+      <view>
+        <text>桌号:</text>
+        <text>08 </text>  
+      </view>
+      <view>
+        <text>人数：</text>
+        <text>6</text>
+      </view>
+      <view>
+        <text>下单时间</text>
+        <text>16:59</text>
+      </view>
+    </view>
+    <view class="order-content">
+        <text>粉丝蒜蓉扇贝</text>
+        <text>x1</text>
+        <text>￥28</text>
+    </view>
+  </view>
+  <view class="bottom-info">
+    <text>微信支付：118元</text>
+    <text style="color:#ff8800">已完成</text>
+  </view>
+</outer>

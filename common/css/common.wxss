@@ -1,0 +1,9 @@
+page{
+  font-family: "黑体";
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,28 @@
+<outer>
+  <view class="head-box">
+    <view bindtap='modeToggle' data-tid="1">
+      <image src="{{active==1?'../../images/cloud2.png':'../../images/cloud1.png'}}" mode="widthFix"></image>
+      <text>活动</text>
+    </view>
+    <view bindtap='modeToggle' data-tid="2">
+      <image src="{{active==1?'../../images/cloud1.png':'../../images/cloud2.png'}}" mode="widthFix"></image>
+      <text>优惠</text>
+    </view>
+  </view>
+  <view wx:if="{{active==1}}" bindtap='start-act' class="act-box">
+    <image src="../../images/ac1.png" mode='widthFix'></image>
+  </view>
+  <view wx:if="{{active==2}}" class="discount-box">
+    <view wx:for="{{discountData}}" wx:key="index" class="dis-item">
+      <image src="../../images/disbg.png" mode="widthFix"></image>
+      <view class="nominal">
+        <view>￥{{item.nominal}}</view>
+        <view>{{item.restrict}}</view>
+      </view>
+      <view class="dis-info">
+        <text>使用时间:{{item.timelinmit}}</text>
+        <text>{{item.isUsed?'已使用':'未使用'}}</text>
+      </view>
+    </view>
+  </view>
+</outer>

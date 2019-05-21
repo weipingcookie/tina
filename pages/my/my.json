@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "outer": "../../components/outer/outer",
+    "cart": "../../components/cart/cart"
+  }
+}

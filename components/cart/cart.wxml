@@ -1,0 +1,40 @@
+
+<view class="cart-box">
+  <view id="mask" wx:if="{{isOpen}}" class="mask" style="height:{{msh}}px" bindtap='close' ></view>
+  <view class="cart-detail-box {{isOpen?'dHeight':''}} ">
+    <view class="detail-title">
+      <view bindtap='delete'>
+        <text class=".icon-ft-delete iconfont delete"></text>
+        <text>清空购物车</text>
+      </view>
+      <view bindtap='pay' wx:if="{{cartList.length>0}}">
+        <text class="iconfont icon-zhifu"></text>
+        <text class="pay" >去支付</text>
+      </view>
+    </view>
+    <scroll-view class="detail-box" scroll-y>
+        <view class="cart-detail-inner" wx:for="{{cartList}}" wx:key="index">
+          <view class="detail-name">{{item.name}}</view>
+          <view class="detail-num">x{{item.number}}</view>
+          <view class="detail-price">{{item.number*item.price}}元</view>
+        </view>
+    </scroll-view>
+  </view>
+  <view  class="cart-in">
+    <view class="cart-left">
+      <text>{{cartTotalPrice==0?"未选择商品":"点击购物车查看订单"}}</text>
+      <!-- <text>{{cartSum}}{{cartTotalPrice}}</text> -->
+    </view>
+    <view class="cart-right">
+      <text>￥{{cartTotalPrice==0?"20起送":cartTotalPrice}}</text>
+    </view>
+    <view class="cart-outer" bindtap='openDetail'>
+      <view class="cart-inner">
+        <text class="iconfont .icon-gouwuche1 cart-icon"></text>
+        <view class="corner-mark" wx:if="{{cartSum>0}}">
+          <text>{{cartSum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

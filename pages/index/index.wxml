@@ -1,0 +1,97 @@
+<!--外框logo组件outer-->
+<outer bindgetMask="getMask">
+  <!--首页轮播-->
+  <swiper class="lb-image-box" indicator-dots indicator-color="rgba(255,255,255,1)" indicator-active-color="rgba(8,59,102,1)" autoplay>
+    <swiper-item>
+      <image mode="widthFix" src="../../images/swiper.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="../../images/swiper2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image mode="widthFix" src="../../images/swiper3.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!--导航条-->
+  <view class="nav-box">
+    <view class="nav-item" wx:for="{{navData}}" wx:key="index" bindtap='goToPages' data-url="{{item.url}}">
+      <image mode="widthFix" class="nav-icon" src="{{item.icon}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <!--扫码和外卖-->
+  <view class="pay-deliver">
+    <image class="paybg" src="../../images/btnbg.png" mode='widthFix'></image>
+    <view class="pd-box">
+      <view class="pay" bindtap="scanPay">
+        <image src="../../images/sm.png" mode='widthFix'></image>
+        <view class="pd-title">
+          <text>买单</text>
+          <text>结账免排队</text>
+        </view>
+      </view>
+      <view class="deliver" bindtap='gotoTakeoutOrder'>
+        <image src="../../images/ps.png" mode='widthFix'></image>
+        <view class="pd-title">
+          <text>外卖</text>
+          <text>减免配送费</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--中部LOGO-->
+  <view class="middle-logo-box">
+    <image mode='widthFix' src="../../images/seafood.png"></image>
+  </view>
+  <!--店铺热销-->
+  <view class="hs-box">
+    <view class="hotsell-title">
+      <image src="../../images/hotsell.png" mode="widthFix"></image>
+    </view>
+    <view class="hs-content">
+      <view class="hot-sell-item" wx:for="{{hotSellData}}" wx:key="index">
+        <view class="item-left">
+          <image class="item-bg" mode="widthFix" src="../../images/hsitembg.png"></image>
+          <image class="item-img" src="{{item.image}}"></image>
+        </view>
+        <view class="item-right">
+          <view class="right-title">{{item.name}}</view>
+          <view class="right-desc">{{item.desc}}</view>
+          <view class="right-bottom-box">
+            <view class="rb-sub">
+              <text>￥</text>
+              <text class="rb-price">{{item.price}}</text>
+            </view>
+            <text bindtap='addCart' data-id='{{item.id}}' data-price='{{item.price}}' class="rb-price-cart iconfont icon-icon"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--新品上市-->
+  <view class="hs-box">
+    <view class="hotsell-title">
+      <image src="../../images/xptitle.png" mode="widthFix"></image>
+    </view>
+    <view class="hs-content">
+      <view class="hot-sell-item" wx:for="{{newFoodData}}" wx:key="index">
+        <view class="item-left xp-left">
+          <image class="item-bg" mode="widthFix" src="../../images/xpbg.png"></image>
+          <image class="item-img xp-foods-img" src="{{item.image}}"></image>
+        </view>
+        <view class="item-right  xp-right">
+          <view class="right-title">{{item.name}}</view>
+          <view class="right-desc">{{item.desc}}</view>
+          <view class="right-bottom-box xp-btm-box">
+            <view class="rb-sub">
+              <text>￥</text>
+              <text class="rb-price">{{item.price}}</text>
+            </view>
+            <text bindtap='newFoodaddCart' data-id='{{item.id}}' data-price='{{item.price}}' class="rb-price-cart iconfont icon-icon"></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <cart wx:if="{{cartList.length>0}}" class="cart" binddelete="indexDelete"  cartList="{{cartList}}"  msh="{{maskHeight-3.5}}"></cart>
+</outer>

@@ -1,0 +1,8 @@
+<view class="outer-box" data-h='{{boxHeight}}'>
+  <!--鲸鱼LOGO-->
+  <image class="jy" src="../../images/jy.png"></image>
+  <!--内容区域-->
+  <scroll-view class="outer-in-box" scroll-y>
+    <slot></slot>
+  </scroll-view>
+</view>

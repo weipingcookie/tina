@@ -1,0 +1,73 @@
+<outer>
+  <view class="time-box">
+    <view class="time-select {{active==0?'s1':active==1?'s2':'s3'}}"></view>
+    <view class="time-item" bindtap='toogleBlue' data-tid="0">
+      <view class="time-icon">
+        <image src="../../images/zc.png" mode="widthFix" style="width:40rpx;"></image>
+      </view>
+      <view class="time-info {{active==0?'tcolor':'fcolor'}}">
+        <view>早餐</view>
+        <view>9:00-11:00</view>
+      </view>
+    </view>
+    <view class="time-item" bindtap='toogleBlue' data-tid="1">
+      <view class="time-icon">
+        <image src="../../images/wc.png" mode="widthFix" style="width:40rpx;"></image>
+      </view>
+      <view class="time-info {{active==1?'tcolor':'fcolor'}}">
+        <view>午餐</view>
+        <view>11:00-17:00</view>
+      </view>
+    </view>
+    <view class="time-item" bindtap='toogleBlue' data-tid="2">
+      <view class="time-icon">
+        <image src="../../images/wwc.png" mode="widthFix" style="width:40rpx;"></image>
+      </view>
+      <view class="time-info {{active==2?'tcolor':'fcolor'}}">
+        <view>晚餐</view>
+        <view>17:00-22:00</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="predeter-item">
+    <view class="reserve-item">
+      <text class="iconfont icon-person fromClass"></text>
+      <picker class="reserve-info" bindchange='bindPickerChange' range="{{personNum}}" value="{{index}}">
+        <text>用餐人数:</text>
+        <text class="form-content">{{personNum[index]}}</text>
+      </picker>
+      <text class="iconfont icon-icon1 sort"></text>
+    </view>
+    <view class="reserve-item">
+      <text class="iconfont icon-shijian fromClass"></text>
+      <picker class="reserve-info" bindchange='bindTimeChange' range="{{timeRange}}" value="{{time}}">
+        <text>用餐时间:</text>
+        <text class="form-content">{{timeRange[time]}}</text>
+      </picker>
+      <text class="iconfont icon-icon1 sort"></text>
+    </view>
+    <view class="reserve-item">
+      <text class="iconfont icon-bk-pen fromClass"></text>
+      <view class="reserve-info">
+        <text>联系人姓名：</text>
+        <input type="text" placeholder='请输入联系人姓名'></input>
+      </view>
+    </view>
+    <view class="reserve-item">
+      <text class="iconfont icon-weibiaoti-1 fromClass"></text>
+      <view class="reserve-info">
+        <text>联系人电话：</text>
+        <input type="text" placeholder='请输入联系人电话'></input>
+      </view>
+    </view>
+    <view class="reserve-item" style="align-items:flex-start;margin-top:20rpx;">
+      <text class="iconfont icon-beizhu fromClass" style="margin-top:-5rpx;"></text>
+      <view class="reserve-info" style="align-items:flex-start;">
+        <text>备注：</text>
+        <textarea class="comment" placeholder='此处备注'></textarea>
+      </view>
+    </view>
+    <view class="submit" bindtap='submit'>立即提交</view>
+  </view>
+</outer>

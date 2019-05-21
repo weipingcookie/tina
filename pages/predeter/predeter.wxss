@@ -1,0 +1,110 @@
+@import "../../common/css/common.wxss";
+@import "../../common/css/icon.wxss";
+.time-box{
+  width:90%;
+  height:120rpx;
+  border:4rpx solid #369cfe;
+  border-radius: 90rpx;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.time-item{
+  width:33.333%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2%;
+  position: relative;
+  z-index: 5;
+}
+
+.time-info{
+  flex: 1;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 1.8;
+  color:#053860;
+  transition: all .2s linear;
+}
+.time-select{
+  width:33.33%;
+  height:120rpx;
+  background: #369cfe;
+  border-radius: 90rpx;
+  color:#fff;
+  position: absolute;
+  top:0;
+  left:0;
+  transition: all .2s linear;
+}
+.s1{
+  left:0;
+  color:#fff;
+}
+.s2{
+  left:33.33%;
+  color:#fff;
+}
+.s3{
+  left:66.66%;
+  color:#fff;
+}
+.time-select view{
+  color:#fff;
+}
+.tcolor{
+  color:#fff;
+}
+.fcolor{
+  color:#053860;
+}
+.predeter-item{
+  width:90%;
+  margin: 0 auto;
+  margin-top:50rpx;
+}
+.reserve-item{
+  display: flex;
+  justify-content: flex-start;
+  color:#053860;
+  font-size:28rpx;
+  align-items: center;
+}
+.fromClass{
+  font-size:40rpx;
+}
+.reserve-title{
+  width:300rpx;
+  margin-left: 10rpx;
+}
+.sort{
+  font-size:60rpx;
+}
+.reserve-info{
+  width:500rpx;
+  margin-left:20rpx;
+  display: flex;
+  align-items: center;
+}
+.form-content{
+  margin-left: 20rpx;
+}
+.comment{
+  height:100rpx;
+  width:370rpx;
+}
+.submit{
+  width:250rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 50rpx;
+  background: #369cfe;
+  color:#fff;
+  font-size:28rpx;
+  margin-top: 50rpx;
+}

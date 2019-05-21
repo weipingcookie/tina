@@ -1,0 +1,28 @@
+<outer bindgetMask="getMask">
+  <view class="header-bg">
+    <image mode="widthFix" src="../../images/orderheadbg.jpg"></image>
+  </view>
+  <scroll-view scroll-x class="nav-bar">
+    <view bindtap='toggleNav' data-id="{{item.id}}" wx:for="{{navData}}" wx:key="index" class="nav-item {{active==item.id?'active':''}}">{{item.name}}<text wx:if="{{active==item.id}}" class='line'></text></view>
+  </scroll-view>
+  <scroll-view class="goods-outer" scroll-y>
+    <view class="goods-item" wx:for="{{foodData}}" wx:key="index">
+      <view class="item-image">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="item-right">
+        <view class="item-title">{{item.name}}</view>
+        <view class="item-desc">{{item.desc}}</view>
+        <view class="item-bottom">
+          <text class="item-price">￥{{item.price}}</text>
+          <text class="item-sale">月销：{{item.sales}}</text>
+          <view class="add" data-id='{{item.id}}' data-price='{{item.price}}' bindtap='addCart'>
+            <image src="../../images/cbg.png"></image>
+            <text>加入购物车</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <cart class="cart" binddelete="indexDelete"  cartList="{{cartList}}"  msh="{{maskHeight}}"></cart>
+</outer>

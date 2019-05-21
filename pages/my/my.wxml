@@ -1,0 +1,38 @@
+<outer>
+  <view class="avatar-box">
+    <view class="avatar">
+    <button class="login" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image class="abg" src="../../images/avatarbg.png"></image>
+      <image class="useravatar" src="{{userInfo.avatarUrl}}"></image>
+      </block>
+    </view>
+    <view class="username"><text>{{!hasUserInfo && canIUse?"":userInfo.nickName}}</text></view>
+  </view>
+  <view class="club-card-box">
+    <view class="club-card">
+      <image src="../../images/clubcard.jpg"></image>
+      <view class="clubcard-number">
+        <text>卡号:</text>
+        <text>18712456785</text>
+      </view>
+    </view>
+  </view>
+  <view class="clubcardyue">
+    <text class="iconfont icon-yue yue-style"></text>
+    <text>余额：</text>
+    <text>0.00元</text>
+  </view>
+  <view class="userinfo-item item-first" bindtap='gotoAddress'>
+    <text class="iconfont icon-dizhi user-icon"></text>
+    <text>我的地址</text>
+  </view>
+  <view class="userinfo-item" bindtap='gotoMyorder'>
+    <text class="iconfont icon-order-tap user-icon"></text>
+    <text>我的订单</text>
+  </view>
+  <view class="userinfo-item">
+    <text class="iconfont icon-youhuiquan user-icon"></text>
+    <text>我的优惠券</text>
+  </view> 
+</outer>

@@ -1,0 +1,92 @@
+@import "../../common/css/icon.wxss";
+@import "../../common/css/common.wxss";
+
+.head-box {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.head-box view {
+  position: relative;
+  font-size: 32rpx;
+  color: #053860;
+  width: 200rpx;
+}
+
+.head-box view image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200rpx;
+}
+
+.head-box view text {
+  position: relative;
+  top: 15rpx;
+  left: 98rpx;
+}
+
+.act-box {
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.act-box image {
+  width: 100%;
+}
+
+.discount-box {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 70rpx;
+}
+
+.dis-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  box-shadow: 8rpx 8rpx 10rpx #595757;
+  background: #fff;
+}
+
+.dis-item image {
+  width: 100%;
+  display: block;
+}
+
+.dis-info {
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+  top: -6rpx;
+  font-size: 28rpx;
+  padding: 0 5%;
+}
+
+.nominal {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 20rpx;
+}
+
+.nominal view:nth-child(1) {
+  font-size: 60rpx;
+}
+
+.nominal view:nth-child(2) {
+  font-size: 30rpx;
+}

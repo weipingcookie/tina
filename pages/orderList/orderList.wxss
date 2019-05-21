@@ -1,0 +1,323 @@
+@import "../../common/css/icon.wxss";
+@import "../../common/css/common.wxss";
+
+.ol-box {
+  width: 100%;
+  height: 420rpx;
+  /* position: fixed;
+  top: 80rpx;
+  left: 0; */
+}
+
+.inner-box {
+  width: 100%;
+  height: 420rpx;
+  position: relative;
+}
+
+.ol-title {
+  text-align: center;
+  font-size: 36rpx;
+  color: #053860;
+  padding-top: 5rpx;
+}
+
+.ol-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 420rpx;
+  transform: translateX(-50%);
+}
+
+.table-type-box {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  padding-top: 60rpx;
+  z-index: 2;
+  position: relative;
+}
+
+.table-type-box view {
+  padding: 8rpx 30rpx;
+  color: #053860;
+  border: 2rpx solid #053860;
+  margin-right: 16rpx;
+}
+
+.table-bg {
+  background: #fff;
+}
+
+.num-box {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.num {
+  display: inline-block;
+  padding: 6rpx 14rpx;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+  border: 2rpx solid #053860;
+  width: 55rpx;
+  text-align: center;
+  color: #053860;
+  margin-right: 8rpx;
+}
+
+.num-outer {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 10rpx;
+  overflow-y: auto;
+}
+
+.over-out {
+  width: 100%;
+  margin: 0 auto;
+  height: 130rpx;
+}
+
+.holdHigh {
+  width: 100%;
+  padding-top: 420rpx;
+}
+
+.numbg {
+  background: #fff;
+}
+
+.peonum-box {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 5%;
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #fff;
+  padding-bottom: 10rpx;
+}
+
+.renshu {
+  color: #f59c36;
+  font-size: 60rpx;
+  margin-right: 20rpx;
+}
+
+.picker {
+  width: 100%;
+  font-size: 32rpx;
+  font-family: "黑体";
+  color: #053860;
+}
+
+.downarrow {
+  font-size: 60rpx;
+  transform: rotatez(-90deg);
+  transform-origin: center;
+  transition: all 0.2s linear;
+}
+
+.downarrow-route {
+  font-size: 60rpx;
+  transform: rotatez(0deg);
+  transform-origin: center;
+  transition: all 0.2s linear;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  padding: 0 7%;
+  padding-bottom: 10rpx;
+  margin: 16rpx auto;
+  font-size: 28rpx;
+  color: #053860;
+  border-bottom: 2rpx solid #fff;
+}
+
+.num-btn {
+  width: 107rpx;
+  border-radius: 30rpx;
+  overflow: hidden;
+  border: 2rpx solid #fa0;
+  box-sizing: border-box;
+}
+
+.item-name {
+  width: 20%;
+  text-align: left;
+}
+
+.item-price {
+  width: 10%;
+  text-align: left;
+}
+
+.num-btn view {
+  float:left;
+width:34rpx;
+text-align:center;
+height:33rpx;
+line-height:33rpx;
+display:flex;
+justify-content:center;
+
+}
+
+.num-btn view.add {
+  background: #fa0;
+  border-radius: 50%;
+  font-size: 22rpx;
+  float: right;
+}
+
+.minus {
+  font-size: 22rpx;
+}
+
+.summation {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.text-container {
+  height: 32rpx;
+}
+
+.comment{
+  width:600rpx;
+  height: 32rpx;
+  display: block;
+  position: relative;
+}
+
+.pay-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  color: #053860;
+  font-weight: bold;
+}
+
+.payname {
+  margin-right: 10rpx;
+  color: #fd8701;
+}
+
+.pay-box {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 12rpx 7.5%;
+  background: #fd8701;
+  color: #fff;
+  font-size: 36rpx;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.order-list-box {
+  width: 100%;
+  height: 260rpx;
+}
+
+.pay-container2 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  height: 0rpx;
+  transition: all .2s linear;
+  z-index: 150;
+}
+
+.show{
+  height:380rpx;
+}
+
+.show-btm{
+  height:0rpx;
+  padding: 0;
+}
+
+.container-in {
+  width: 100%;
+  position: relative;
+  height: 380rpx;
+}
+
+.container-in image.pbg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.pay-info {
+  width: 200rpx;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  margin-left: -100rpx;
+  margin-top: -100rpx;
+  z-index: 10;
+  text-align: center;
+}
+
+.pay-info image {
+  width: 184rpx;
+  height: 76rpx;
+}
+
+.pay-btn {
+  position: relative;
+  width: 100%;
+}
+
+.affirm {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  height: 100rpx;
+  top: 0;
+  left: 0;
+}
+
+.pay-btn text {
+  font-size: 28rpx;
+  line-height: 86rpx;
+  text-align: center;
+}
+.pay-price{
+  font-size:60rpx;
+}
+.close{
+  color:#fd8701;
+  font-size:40rpx;
+  position: absolute;
+  top:20%;
+  right:12%;
+  z-index: 20;
+}
+.mask{
+  width:100%;
+  height:100vh;
+  background: rgba(0,0,0,.6);
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 90;
+}

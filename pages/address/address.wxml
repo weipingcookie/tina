@@ -1,0 +1,34 @@
+<outer>
+  <view class="address-box" wx:for="{{addressData}}" wx:key="index">
+    <image mode="widthFix" src="../../images/addressbg.png"></image>
+    <view class="address-info-box">
+      <view class="addressinfo-title">
+        <text>收货人:{{item.name}}</text>
+        <text>{{item.tel}}</text>
+      </view>
+      <view class="address-content">
+        <view>{{item.address}}</view>
+      </view>
+      <view class="address-btm">
+        <view bindtap='defaultAddress' data-aid="{{item.aid}}">
+          <text class="iconfont {{item.isDefault?'icon-xuanzhong':'icon-yuan'}} address-icon"></text>
+          <text>默认地址</text>
+        </view>
+        <view class="btm">
+          <view class="redact" bindtap='gotoRedactAddress'>
+            <text class="iconfont icon-bk-pen address-icon"></text>
+            <text>编辑</text>
+          </view>
+          <view class="delete" bindtap='deleteAddress' data-did="{{item.aid}}">
+            <text class="iconfont icon-ft-delete address-icon"></text>
+            <text>删除</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="add-address" bindtap='gotoRedactAddress'>
+    <image src="../../images/buttonbg.png"></image>
+    <text class="add-tltle">添加新地址</text>
+  </view>
+</outer>

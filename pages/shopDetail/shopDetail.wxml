@@ -1,0 +1,17 @@
+<outer>
+  <image class="shop-photo" src="../../images/shop.jpg" mode="widthFix"></image>
+  <view class="shopdetail-bg">
+    <view class="detial-title">{{shopinfo.title}}</view>
+    <view class="detial-mode">{{shopinfo.mode}}</view>
+    <view class="detial-info">{{shopinfo.info}}</view>
+    <view class="detial-address">
+      <text class="iconfont icon-dizhi"></text> {{shopinfo.address}}</view>
+    <view class="detial-time">
+      <text class="iconfont icon-shijian"></text> 营业时间{{shopinfo.time}}</view>
+    <view class="detial-tel">
+      <text class="iconfont icon-weibiaoti-1"></text> 联系电话{{shopinfo.tel}}</view>
+    <image class="sh" src="../../images/sh.png" mode="widthFix"></image>
+    <image class="hpx" src="../../images/hpx.png" mode="widthFix"></image>
+  </view>
+  <image class="dpx" src="../../images/dpx.png" mode="widthFix"></image>
+</outer>
